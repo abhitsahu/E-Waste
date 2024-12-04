@@ -9,7 +9,7 @@ export default function HomePage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Link href="/schedule" className="bg-green-100 p-6 rounded-lg hover:bg-green-200 transition duration-300">
           <Calendar className="mx-auto mb-4 text-green-600" size={48} />
-          <h2 className="text-2xl font-semibold mb-2">Collection Schedule</h2>
+          <h2 className="text-2xl font-semibold mb-2 text-black">Collection Schedule</h2>
           <p>View and manage your waste collection schedule.</p>
         </Link>
         <Link href="/recycling" className="bg-green-100 p-6 rounded-lg hover:bg-green-200 transition duration-300">
