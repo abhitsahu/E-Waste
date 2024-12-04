@@ -50,7 +50,7 @@ export default function RecyclingInfo() {
           <li>Rinse containers before recycling</li>
           <li>Remove caps and lids from bottles and jars</li>
           <li>Flatten cardboard boxes</li>
-          <li>Don't bag recyclables - keep them loose in the bin</li>
+          <li>Do not bag recyclables - keep them loose in the bin</li>
           <li>Check with your local recycling center for specific guidelines</li>
         </ul>
       </div>
