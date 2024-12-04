@@ -3,19 +3,109 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --primary-color: #10B981;
+  --secondary-color: #059669;
+  --background-color: #F3F4F6;
+  --text-color: #1F2937;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
 }
+
+.btn {
+  @apply font-bold py-2 px-4 rounded transition duration-300;
+}
+
+.btn-primary {
+  @apply bg-green-600 text-white;
+}
+
+.btn-primary:hover {
+  @apply bg-green-700;
+}
+
+.btn-secondary {
+  @apply bg-green-100 text-green-800;
+}
+
+.btn-secondary:hover {
+  @apply bg-green-200;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.input {
+  @apply border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500;
+}
+
+/* Accessibility improvements */
+.sr-only {
+  @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1F2937;
+    --text-color: #F9FAFB;
+  }
+
+  .card {
+    @apply bg-gray-800;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-700 text-gray-200;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-gray-600;
+  }
+
+  .input {
+    @apply bg-gray-700 border-gray-600 text-white;
+  }
+}
+
