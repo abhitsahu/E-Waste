@@ -89,11 +89,11 @@ body {
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #1F2937;
-    --text-color: #F9FAFB;
+    --text-color: #FFFFFF;
   }
 
   .card {
-    @apply bg-gray-800;
+    @apply bg-gray-800 text-black;
   }
 
   .btn-secondary {
